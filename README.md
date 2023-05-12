@@ -1,4 +1,4 @@
-# Experiment--04-Implementation-of-combinational-logic-using-universal-gates
+# Experiment--02-Implementation-of-combinational-logic-using-universal-gates
 Implementation of combinational logic using universal-gates
  
 ## AIM:
@@ -31,13 +31,51 @@ F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 ## Program:
 /*
 Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: JOEL P
+RegisterNumber:  212222230057
 */
-## RTL realization
+USING NAND OPERATION:
+```
+module fourexp(A,B,C,D,F);
+input A,B,C,D;
+output F;
+wire P,Q,R;
+assign P = C&(~B)&(~A);
+assign Q = D&(~C)&(~A);
+assign R = (~C)&B&(~A);
+assign F = (~P&~Q&~R);
+endmodule
+```
+
+USING NOR OPERATION:
+```
+module fourexp(A,B,C,D,F);
+input A,B,C,D;
+output F;
+wire P,Q,R,S;
+assign P = C&(~B)&A;
+assign Q = D&(~C)&A;
+assign R = C&(~B)&A;
+assign S = ~(P|Q|R);
+assign F = ~S;
+endmodule
+```
 
 ## Output:
 ## RTL
+
+![image](https://github.com/collinsjoel10/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/118626456/ba1a01b1-d300-456f-b0e4-255335c47013)
+
 ## Timing Diagram
+
+FOR NAND:
+
+![image](https://github.com/collinsjoel10/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/118626456/1495e5bf-d1d6-4f17-9679-2d088f4e4aee)
+
+FOR NOR:
+
+![image](https://github.com/collinsjoel10/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/118626456/72fe8835-3aa6-4914-91ff-f8911444eb4b)
+
 ## Result:
+
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
