@@ -26,8 +26,18 @@ NOR gate is actually a combination of two logic gates: OR gate followed by NOT g
 
 F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 
-## Logic Diagram
 ## Procedure
+1.Create a project with required entities.
+
+2.Create a module along with respective file name.
+
+3.Run the respective programs for the given boolean equations.
+
+4.Run the module and get the respective RTL outputs.
+
+5.Create university program(VWF) for getting timing diagram.
+
+6.Give the respective inputs for timing diagram and obtain the results
 ## Program:
 /*
 Program to implement the given logic function using NAND and NOR gates and to verify its operations in quartus using Verilog programming.
@@ -64,7 +74,11 @@ endmodule
 ## Output:
 ## RTL
 
+NAND combination:
 ![image](https://github.com/collinsjoel10/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/118626456/ba1a01b1-d300-456f-b0e4-255335c47013)
+
+NOR combination:
+![image](https://github.com/collinsjoel10/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/118626456/8dde92da-1cc2-4112-99ba-5a345d8453a8)
 
 ## Timing Diagram
 
